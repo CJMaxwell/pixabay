@@ -20,7 +20,7 @@ const  App = () => {
     <div className="container mx-auto">
       <ImageSearch searchText={text => setTerm(text)} />
       {!isLoading && images.length === 0 && <h1 className="text-center text-5xl mx-auto mt-32">No Images Found</h1>}
-      { isLoading ? <h1 className="text-center text-6xl mx-auto mt-64">Loading...</h1> : <div className="grid grid-cols-4 gap-4">
+      { isLoading ? <h1 className="text-center text-6xl mx-auto mt-64">Loading...</h1> : <div className="block md:grid md:grid-cols-4 md:gap-4">
         {images.map(image => (
           <ImageCard key={image.id} image={image} />
         ))}
